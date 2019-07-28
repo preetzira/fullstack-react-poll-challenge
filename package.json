@@ -1,0 +1,42 @@
+{
+  "name": "fullstack-react-poll-challenge",
+  "version": "1.0.0",
+  "description": "![](./doc/react-poll-challenge.png)",
+  "main": "next.config.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullstackio/challenge-react-poll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstackio/challenge-react-poll/issues"
+  },
+  "homepage": "https://github.com/fullstackio/challenge-react-poll",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.136",
+    "lodash": "^4.17.15",
+    "next": "latest",
+    "next-images": "^1.1.2",
+    "pose": "^2.3.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "12.0.12",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/styled-components": "4.1.16",
+    "babel-plugin-styled-components": "^1.10.0",
+    "typescript": "3.5.2"
+  }
+}

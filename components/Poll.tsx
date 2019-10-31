@@ -13,9 +13,7 @@ function Option(props: any){
   const onAnswerBackgroundColor = isMaxVoted ? '161, 255, 244' : '225,225,225'
   const votes = ((props.answer.votes/props.totalVotes) * 100).toFixed(2)
   const customStyle = props.isAnswered ? {
-    background: `linear-gradient(-90deg, rgb(255,255,255) ${100- (+votes)}% , 
-    rgb(${onAnswerBackgroundColor}) ${votes}%)
-    `
+    background: `linear-gradient(to right, rgb(${onAnswerBackgroundColor}) ${votes}%,rgb(255,255,255) ${votes}% )`
   } : {}
 
   const [isSelected,setSelected] = React.useState(false)
@@ -27,7 +25,7 @@ function Option(props: any){
 
   return (
     <li
-      className={`option ${isMaxVoted && props.isAnswered ? 'max-voted' : ''}`}
+      className={`option${isMaxVoted && props.isAnswered ? ' max-voted' : ''}`}
       style={customStyle}
       onClick={()=>!props.isAnswered ? handleClick() : null} >
       {props.answer.text}{isSelected ? <> &#9745;</> : ''}

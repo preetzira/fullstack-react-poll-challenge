@@ -24,10 +24,15 @@ export default createGlobalStyle`
     color: #030C30;
   }
 
+  h1{
+    text-align: center;
+  }
+
   ul,h2{
     max-width:350px;
     margin:20px auto;
   }
+
   ul{
     margin-bottom:50px;
     padding:0;

@@ -26,7 +26,7 @@ export default createGlobalStyle`
 
   ul,h2{
     max-width:350px;
-    margin:auto;
+    margin:20px auto;
   }
   ul{
     margin-bottom:50px;
@@ -40,7 +40,6 @@ export default createGlobalStyle`
     padding:10px 15px;
     border-radius:5px;
     margin:10px 0px;
-    background-repeat:'no-repeat';
   }
 
   .option span.votes{
@@ -54,5 +53,9 @@ export default createGlobalStyle`
 
   li.max-voted{
     font-weight:bolder;
+  }
+
+  .text-light{
+    color: rgb(156, 156, 156);
   }
 `;

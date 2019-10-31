@@ -9,7 +9,8 @@ type Props = {
 const PollWrapper = styled.div``;
 
 function Option(props: any){
-  const onAnswerBackgroundColor = props.max === props.answer.votes ? '0,196,255' : '181,181,181'
+  const isMaxVoted = props.max === props.answer.votes
+  const onAnswerBackgroundColor = isMaxVoted ? '161, 255, 244' : '225,225,225'
   const customStyle = props.isAnswered ? {
     background: `linear-gradient(to right, rgb(${onAnswerBackgroundColor}) 0%, 
     rgb(255,255,255) ${props.answer.votes}%)`
@@ -23,10 +24,10 @@ function Option(props: any){
   }
   return (
     <li
-      className={`option ${isSelected ? 'selected' : ''}`}
+      className={`option ${isMaxVoted && props.isAnswered ? 'max-voted' : ''}`}
       style={customStyle}
       onClick={()=>!props.isAnswered ? handleClick() : null} >
-      {props.answer.text}
+      {props.answer.text}{isSelected ? <> &#9745;</> : ''}
       <span className="votes">{props.isAnswered ? props.answer.votes+'%' : ""}</span>
     </li>
   )
@@ -37,11 +38,11 @@ function Question(props: any){
   let { question, answers } = props
   const maxVotes = Math.max(...answers.map((val:any)=>val.votes))
   return <React.Fragment key={question.text}>
-      <strong>{question.text}</strong>
+      <h2><strong>{question.text}</strong></h2>
       <ul>
         {
           answers.map((answer :any)=>(
-            <Option max={maxVotes} key={answer.text} answer={answer} isAnswered={isAnswered} onClick={()=>!isAnswered ? setAnswered(!isAnswered) : null}/>
+            <Option max={maxVotes} key={answer.text} answer={answer} isAnswered={isAnswered} onClick={()=>setAnswered(!isAnswered)}/>
           ))
         }
       </ul>

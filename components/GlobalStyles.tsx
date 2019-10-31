@@ -24,7 +24,13 @@ export default createGlobalStyle`
     color: #030C30;
   }
 
+  ul,h2{
+    max-width:350px;
+    margin:auto;
+  }
   ul{
+    margin-bottom:50px;
+    padding:0;
     list-style:none;
   }
 
@@ -33,17 +39,20 @@ export default createGlobalStyle`
     border:1px solid #e2e2e2;
     padding:10px 15px;
     border-radius:5px;
-    margin:10px;
+    margin:10px 0px;
     background-repeat:'no-repeat';
   }
 
   .option span.votes{
     float:right;
-    font-weight:bold;
   }
 
   li.selected{
     box-shadow: 0px 0px 0px 1px #ff8100;
     border-color: #ff8100;
+  }
+
+  li.max-voted{
+    font-weight:bolder;
   }
 `;

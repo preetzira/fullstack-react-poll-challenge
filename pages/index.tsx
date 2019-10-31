@@ -10,15 +10,8 @@ export default () => (
   <IndexPage>
     <GlobalStyles />
     <h1>Fullstack.io React Poll Challenge</h1>
-    <p>
-      Here is some text that is on the page in a paragraph tag. The poll will
-      appear within this context below.
-    </p>
+    <br/>
     <Poll qandas={questions} />
-    <p>
-      Here is the rest of the text on the page. We just have something down here
-      for context to see it in.
-    </p>
   </IndexPage>
 );
 
